@@ -1,0 +1,15 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: accounting-service-config
+  namespace: microservices
+  labels:
+    app: accounting-service
+data:
+  NODE_ENV: "production"
+  PORT: "8081"
+  LOG_LEVEL: "info"
+  IMAGE_STORAGE_PATH: "/app/storage/images"
+  DEFAULT_IMAGE_URL: "https://picsum.photos/400/300"
+  IMAGE_DOWNLOAD_TIMEOUT_MS: "15000"
+  MAX_IMAGE_SIZE_BYTES: "10485760"
